@@ -95,6 +95,7 @@ nav {
   align-items: center;
   /* border: 2px solid rgb(185, 130, 239); */
   width: 48%;
+  padding-right: 2em;
 }
 
 .search-bar {
@@ -110,10 +111,11 @@ nav {
   border: none;
   width: 82%;
   padding: 0.8em;
-  padding-left: 1.2em;
+  padding-left: 2em;
   background-color: #212121;
   caret-color: red;
-  font-size: 0.9em;
+  font-size: 1em;
+  outline: none;
 }
 .search-button {
   width: 18%;
