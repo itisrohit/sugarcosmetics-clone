@@ -1,14 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../components/Navigation.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const messages = [
+  "New launch⚠️: Try our Drop A Tint Lip Oil at Rs.599",
+  "Use code: TREAT10 and enjoy 10% OFF on all orders🙌",
+  "Enjoy Rs.300 Off on orders above Rs.999! Use Code: FESTIVE300🎉",
+  "New launch⚠️: Try our Glide Peptide Serum Lipstick at Rs.499"
+];
+
 const Navigation = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    const slideDuration = 500; 
+    const pauseDuration = 1000; 
+
+    const intervalId = setInterval(() => {
+      setIsPaused(true); 
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % messages.length);
+        setIsPaused(false); 
+      }, pauseDuration);
+    }, slideDuration + pauseDuration);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <div className="navbar">
       <div className="nav-belt">
         <div className="nav-belt-texts">
-          <div className="nav-belt-left">
-            <p>Use code: TREAT10 and enjoy 10% OFF on all orders🙌 </p>
+        <div className="nav-belt-left">
+            {messages.map((message, index) => (
+              <p
+                key={index}
+                style={{
+                  transform: `translateY(${(index - currentIndex) * 100}%)`,
+                  transition: isPaused ? 'none' : 'transform 0.5s ease-in-out'
+                }}
+              >
+                {message}
+              </p>
+            ))}
           </div>
           <div className="nav-belt-right">
             <div className="icon">

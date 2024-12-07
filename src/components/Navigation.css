@@ -25,10 +25,22 @@
 .nav-belt-left {
   display: flex;
   align-items: center;
+  justify-content: center; 
   /* border: 2px solid green; */
-  width: 35%;
+  width: 38%;
   height: 100%;
   color: white;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  line-height: 50px;
+  font-weight: bold;
+}
+.nav-belt-left p {
+  position: absolute;
+  width: 100%;
+  text-align: center; 
+  transition: transform 0.5s ease-in-out;
 }
 .nav-belt-right {
   /* border: 2px solid blue; */
