@@ -116,6 +116,7 @@ nav {
   caret-color: red;
   font-size: 1em;
   outline: none;
+  color: white;
 }
 .search-button {
   width: 18%;
