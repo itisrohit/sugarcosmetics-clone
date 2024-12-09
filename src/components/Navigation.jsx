@@ -29,6 +29,7 @@ const Navigation = () => {
   }, []);
 
   return (
+    <div className="full-navigation">
     <div className="navbar">
       <div className="nav-belt">
         <div className="nav-belt-texts">
@@ -99,20 +100,25 @@ const Navigation = () => {
       </nav>
 
       <div className="nav-links">
-        <p>SUGAR PLAY</p>
-        <p>LIPS</p>
-        <p>EYES</p>
-        <p>FACE</p>
-        <p>NAILS</p>
-        <p>SKINCARE</p>
-        <p>ACCESSORIES</p>
-        <p>GIFTING</p>
-        <p>BESTSELLERS</p>
-        <p>NEW LAUNCHES</p>
-        <p>OFFERS</p>
-        <p>BLOG</p>
-        <p>SUGAR TOP</p>
+        <p className="nav-text">SUGAR PLAY</p>
+        <p className="nav-text">LIPS</p>
+        <p className="nav-text">EYES</p>
+        <p className="nav-text">FACE</p>
+        <p className="nav-text">NAILS</p>
+        <p className="nav-text">SKINCARE</p>
+        <p className="nav-text">ACCESSORIES</p>
+        <p className="nav-text">GIFTING</p>
+        <p className="nav-text">BESTSELLERS</p>
+        <p className="nav-text">NEW LAUNCHES</p>
+        <p className="nav-text">OFFERS</p>
+        <p className="nav-text">BLOG</p>
+        <p className="nav-text">SUGAR TOP</p>
       </div>
+    </div>
+
+    <div className="box-gif">
+      <img src="https://images.sugarcosmetics.com/Homepage/0a2edfd6-8883-4f04-8607-6bc644a18c87.gif" />
+    </div>
     </div>
   );
 };
